@@ -3,7 +3,8 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Dashboard } from "../screens/Dashboard";
 import { Register } from "../screens/Register";
 import { useTheme } from "styled-components";
-import { MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons';
+import { Resume } from "../screens/Resume";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -17,7 +18,7 @@ export function AppRoutes(){
     <Screen name='Cadastrar' component={Register} options={{ tabBarIcon: (({ size, color }) =>
      <MaterialIcons name='attach-money' size={size} color={color}/> ) }} />
 
-    <Screen name='Resumo' component={Register} options={{ tabBarIcon: (({ size, color }) =>
+    <Screen name='Resumo' component={Resume} options={{ tabBarIcon: (({ size, color }) =>
      <MaterialIcons name='pie-chart' size={size} color={color}/> ) }} />
     </Navigator>
     );
